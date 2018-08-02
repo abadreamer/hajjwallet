@@ -1,7 +1,7 @@
 <html>
 <head>
-  <link rel="stylesheet" href="css.css">
- <title> Haji Wallet - Register </title>
+  <link rel="stylesheet" href="css1.css">
+ <title> Hajj Wallet- Mrchnt- Register </title>
 
 <!--<META HTTP-EQUIV="Refresh" CONTENT="5;URL=reg.html">  -->
 </head>
@@ -9,8 +9,8 @@
 <center>
 <br><br>
 
-<a href="take_pic.html">
-<img src="images/reg.png">
+<a href="pay.php">
+<img src="images/pay1.png">
 
     </a>
 

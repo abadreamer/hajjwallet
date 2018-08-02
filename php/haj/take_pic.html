@@ -8,6 +8,10 @@
 	
 </head>
 <body>
+
+
+	
+	
 <center>
 	<div id="results">Your captured image will appear here...</div>
 	
@@ -30,7 +34,7 @@
 	</script>
 	
 	<!-- A button for taking snaps -->
-	<form>
+	<form action="saveimage.php">
 		<input type=button value="Go"  onClick="take_snapshot()">
 	</form>
 	
@@ -46,8 +50,8 @@
 					
 				Webcam.upload( data_uri, 'saveimage.php', function(code, text) {
 					document.getElementById('results').innerHTML = 
-					'<h2>The Image Is save</h2>' + 
-					'<img src="'+text+'"/>';
+					'<h2>successfully registered, you may login now</h2>' + 
+					'<img src="'+text+'"/>' + '<META HTTP-EQUIV="Refresh" CONTENT="1;URL=profile.php"> ';
 				} );	
 			} );
 		}

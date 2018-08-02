@@ -1,14 +1,14 @@
 <html>
 <head>
-  <link rel="stylesheet" href="css.css">
- <title> Haji Wallet - login </title>
+  <link rel="stylesheet" href="css1.css">
+ <title> Haji Wallet Mrchnt - login </title>
 
 <!--<META HTTP-EQUIV="Refresh" CONTENT="5;URL=reg.html">  -->
 </head>
 <body>
 <center>
 
-<a href="reg.php"> 
+<a href="profile.html"> 
 <img src="images/login_new.png">
 </a>
 <!--

@@ -44,7 +44,7 @@ function done(){
     <button id="take_snapshots" style="background:url(button.png) no-repeat;" class="btn btn-success btn-sm">/button>
 Now below the webcam screen we will use the buttons to take the snapshot.
 
-<form>
+<form action="saveimage.php">
  <!--<input type="button" value="Take Snapshot" onClick="take_snapshot()"> -->
  <input type="submit" value="go" style="background:url(button.png) no-repeat;" />
 </form>

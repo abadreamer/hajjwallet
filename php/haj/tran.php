@@ -12,10 +12,8 @@ Haji Wallet
 <body>
 <center>
 <br><br>
-
-<img src="images/logo_alls.png">
-<br><br><br>
-<a href="login.php">  <img src="images/icons_lan.png"> </a>
+<a href="index.html">
+<img src="images/tran.png">
 
 
 
