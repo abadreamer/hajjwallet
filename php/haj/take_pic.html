@@ -1,0 +1,57 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css.css">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Take Pic </title>
+	
+</head>
+<body>
+<center>
+	<div id="results">Your captured image will appear here...</div>
+	
+	
+	
+	<div id="my_camera"></div>
+	
+	<!-- First, include the Webcam.js JavaScript Library -->
+	<script type="text/javascript" src="webcam.js"></script>
+	
+	<!-- Configure a few settings and attach camera -->
+	<script language="JavaScript">
+		Webcam.set({
+			width: 600,
+			height: 460,
+			image_format: 'jpeg',
+			jpeg_quality: 90
+		});
+		Webcam.attach( '#my_camera' );
+	</script>
+	
+	<!-- A button for taking snaps -->
+	<form>
+		<input type=button value="Go"  onClick="take_snapshot()">
+	</form>
+	
+	<!-- Code to handle taking the snapshot and displaying it locally -->
+	<script language="JavaScript">
+		function take_snapshot() {
+			// take snapshot and get image data
+			Webcam.snap( function(data_uri) {
+				// display results in page
+				
+				document.getElementById('results').innerHTML = 
+					'<h2>Processing</h2>';
+					
+				Webcam.upload( data_uri, 'saveimage.php', function(code, text) {
+					document.getElementById('results').innerHTML = 
+					'<h2>The Image Is save</h2>' + 
+					'<img src="'+text+'"/>';
+				} );	
+			} );
+		}
+	</script>
+	
+</body>
+</html>
