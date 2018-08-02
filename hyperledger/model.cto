@@ -83,10 +83,10 @@ transaction PaymentTrx extends BaseTrx{
 }
 
 transaction TopupTrx extends BaseTrx{
-  o String paymentType
+  o String paymentMethod
   o String paymentRef
-  --> Charger payer
   --> Hajj payee
+  --> Charger payer
 }
 
 

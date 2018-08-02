@@ -19,15 +19,14 @@ async function payForCommodity(paymentTrx){
 
 
 /**
- * Track topup from any user to Hajj
- * @param {com.Hajj.HajjWallet.TopupTrx} topupTrx - the topup to be processed
+ * Track claims dome by merchants to collect thir money
+ * @param {com.Hajj.HajjWallet.TopupTrx} topupTrx - Topup
  * @transaction
  */
-async function topupForHajj(topupTrx) {
-    console.log(topupTrx.payee)
-    topupTrx.payee.wallet.balance = topupTrx.payee.wallet.balance + topupTrx.trxAmount
-    let assetRegistryHjWallet = await getAssetRegistry('com.Hajj.HajjWallet.HjWallet')
-    await assetRegistryHjWallet.update(topupTrx.hajj.wallet)
+async function topup(topupTrx) {
+    topupTrx.payee.wallet.balance += topupTrx.trxAmount
+    let assetRegistryHjjWallet = await getAssetRegistry('com.Hajj.HajjWallet.HjWallet');
+    await assetRegistryHjjWallet.update(topupTrx.payee.wallet);
 }
 
 
