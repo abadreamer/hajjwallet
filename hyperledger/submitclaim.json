@@ -1,0 +1,11 @@
+
+{
+    "$class": "com.Hajj.HajjWallet.ClaimTrx",
+    "transferType": "TransferOut",
+    "transferRef": "33",
+    "payer": "resource:com.Hajj.HajjWallet.Merchant#3012",
+    "trxId": "1",
+    "trxDate": "20180112",
+    "trxAmount": 10,
+    "trxType": "TransferOut"
+  }

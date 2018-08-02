@@ -1,0 +1,97 @@
+/**
+* Hajj wallet trading network
+*/
+namespace com.Hajj.HajjWallet
+
+// ENUMS
+enum MerchantType {
+  o Individual
+  o Enterprise
+}
+
+// ENUMS
+enum CommodityType {
+  o Food
+  o Transportation
+  o Goods
+  o Other
+}
+
+
+// ENUMS
+enum TrxType {
+  o Charge
+  o Pay
+  o TransferOut
+}
+
+asset HjWallet identified by  accountNo{
+  o String accountNo
+  o Double balance
+}
+
+asset MrchntWallet identified by  accountNo{
+  o String accountNo
+  o Double balance
+}
+
+
+abstract participant User identified by accountNo {
+  o String accountNo
+  o String name
+  o String idNo
+  o String idType
+}
+
+participant Charger extends User {
+  o String nationality
+  o String passportNumber
+  o String passportExpirydate
+  o String serviceName
+}
+
+
+participant Hajj extends User {
+  o String nationality
+  o String passportNumber
+  o String passportExpirydate
+  --> HjWallet wallet
+}
+
+participant Merchant extends User {
+  o String type
+  o String serviceName
+  o String iban
+  o String bankName
+  o String address
+  o String registationNo optional 
+  --> MrchntWallet wallet
+}
+
+abstract transaction BaseTrx {
+  o String trxId
+  o String trxDate
+  o Double trxAmount
+  o TrxType trxType
+}
+
+transaction PaymentTrx extends BaseTrx{
+  o String authenticationWay
+  o String authenticationRef
+  --> Hajj payer
+  --> Merchant payee
+}
+
+transaction TopupTrx extends BaseTrx{
+  o String paymentType
+  o String paymentRef
+  --> Charger payer
+  --> Hajj payee
+}
+
+
+transaction ClaimTrx extends BaseTrx{
+  o String transferType
+  o String transferRef
+  --> Merchant payer
+}

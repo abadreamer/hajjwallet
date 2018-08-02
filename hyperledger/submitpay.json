@@ -1,0 +1,11 @@
+{
+    "$class": "com.Hajj.HajjWallet.PaymentTrx",
+    "authenticationWay": "Eye",
+    "authenticationRef": "122",
+    "payer": "resource:com.Hajj.HajjWallet.Hajj#4360",
+    "payee": "resource:com.Hajj.HajjWallet.Merchant#3012",
+    "trxId": "1",
+    "trxDate": "201801010000",
+    "trxAmount": 30,
+    "trxType": "Pay"
+}

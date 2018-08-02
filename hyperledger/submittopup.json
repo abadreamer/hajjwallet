@@ -1,0 +1,12 @@
+{
+  "$class": "com.Hajj.HajjWallet.TopupTrx",
+  "paymentType": "VISA",
+  "paymentRef": "123",
+  "payer": "resource:com.Hajj.HajjWallet.Charger#9695",
+  "payee": "resource:com.Hajj.HajjWallet.Hajj#4360",
+  "trxId": "12",
+  "trxDate": "20180112",
+  "trxAmount": 50,
+  "trxType": "Charge"
+}
+
