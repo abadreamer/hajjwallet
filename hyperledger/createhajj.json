@@ -1,0 +1,11 @@
+{
+  "$class": "com.Hajj.HajjWallet.Hajj",
+  "nationality": "Indonesia",
+  "passportNumber": "A456321",
+  "passportExpirydate": "20220101",
+  "wallet": "resource:com.Hajj.HajjWallet.HjWallet#4360",
+  "accountNo": "4360",
+  "name": "Indonesia Hajj 1",
+  "idNo": "623455",
+  "idType": "Visa"
+}

@@ -1,0 +1,11 @@
+{
+  "$class": "com.Hajj.HajjWallet.Charger",
+  "nationality": "Indonesia",
+  "passportNumber": "A123456",
+  "passportExpirydate": "202001001",
+  "serviceName": "",
+  "accountNo": "6745",
+  "name": "Indonesia charger 1",
+  "idNo": "A123456",
+  "idType": "Passport"
+}
